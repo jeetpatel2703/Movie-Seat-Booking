@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <form method="get" id="payment-form" onsubmit="return validatePayment()" action="./Home.html" >
+        <header>
+            <h1><a href="Home.html" class="logo">Movie Booking</a> </h1>
+            <nav>
+                <a href="Home.html">Home</a>
+                <a href="Aboutus.html">About Us</a>
+                <a href="Contactus.html">Contact Us</a>
+            </nav>
+        </header>
+
+        <section>
+            <h2>Enter Personal Details</h2>
+            <table style="font-weight: bold;margin-left: auto; margin-right: auto;">
+                <tr>
+                    <td><label for="name">Name:</label></td>
+                    <td><input type="text" id="name" name="name"></td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" name="email"></td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td><label for="phone">Phone Number:</label></td>
+                    <td><input type="tel" id="phone" name="phone"></td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+            </table>
+            <h2>Choose Your Payment Method<label style="color: red;">*</label></h2>
+
+            
+                <label>
+                    <input type="radio" name="paymentMethod" value="cash" onchange="showPaymentMethod()" checked> Cash
+                </label>
+
+                <!-- <label>
+                    <input type="radio" name="paymentMethod" value="card" onchange="showPaymentMethod()"> Card
+                </label>
+
+                <label>
+                    <input type="radio" name="paymentMethod" value="upi" onchange="showPaymentMethod()"> UPI
+                </label> -->
+
+                <div id="cashMethod" class="payment-method" style="display: none;font-weight: bold;">
+                    <br>
+                    <p>Please pay in cash at the counter.</p>
+                </div>
+
+                <!-- <div id="cardMethod" class="payment-method" style="display: none;font-weight: bold;">
+                    <br>
+                    <label for="card-number">Card Number:</label>
+                    <input type="text" id="card-number" name="card-number" maxlength="16" required><br><br>
+                    <label for="card-number">CVV:</label>
+                    <input type="tel" name="cvv" id="cvv" maxlength="3">
+                </div>
+
+                <div id="upiMethod" class="payment-method" style="display: none;font-weight: bold;">
+                    <br>
+                    <label for="upi-id">UPI ID:</label>
+                    <input type="text" id="upi-id" name="upi-id" required>
+                </div> -->
+                <br>
+                <h2>Summery:</h2>
+                <table style="margin-left: auto; margin-right: auto;">
+                    <tr>
+                        <td>Seat Numbers:</td>
+                        <td id="bookedSeats" style="font-weight: bold;"></td>
+                    </tr>
+                    <tr></tr>
+                    <tr>
+                        <td>Pay:</td>
+                        <td id="totalPrice" style="font-weight: bold;">	&#8377; </td>
+                    </tr>
+                </table>
+                <br>
+                <button type="submit">Pay Now</button>
+                <br><br>
+        </section>
+        <footer>
+            <p>&copy; Jeet Patel</p>
+        </footer>
+    </form>
+    <script>
+        
+    </script>
+</body>
+
+</html>
